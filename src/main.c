@@ -14,6 +14,8 @@ int main(void)
    
    SysTick_Config(SystemCoreClock/100);
    
+   SCB->CCR |= 0x10;
+   
    c = div(a, b);
    
    while(1);
