@@ -1,0 +1,5 @@
+ARM Cortex-M3/Cortex-M4 (ARMv7-M) Hard Fault Exception Handler
+
+See blog.feabhas.com for full details.
+
+Base project built using ARM/Keil MDK-ARM v4.60
