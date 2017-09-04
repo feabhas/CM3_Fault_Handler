@@ -76,11 +76,12 @@ __asm void HardFault_Handler(void)
 #elif defined(__ICCARM__)
 void HardFault_Handler(void)
 {
-   __asm("TST lr, #4");
-   __asm("ITE EQ");
-   __asm("MRSEQ r0, MSP");
-   __asm("MRSNE r0, PSP");
-   __asm("B Hard_Fault_Handler");
+   __asm(   "TST lr, #4          \n"
+            "ITE EQ              \n"
+            "MRSEQ r0, MSP       \n"
+            "MRSNE r0, PSP       \n"
+            "B Hard_Fault_Handler\n"
+   );
 }
 #else
   #warning Not supported compiler type
